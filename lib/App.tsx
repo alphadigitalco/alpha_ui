@@ -1,7 +1,3 @@
-import { Button } from "./components/button";
-
 export function App() {
-  return (
-      <Button>click-me</Button>
-  );
+    return <h1>App</h1>;
 }

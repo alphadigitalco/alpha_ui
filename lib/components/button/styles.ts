@@ -1,6 +1,6 @@
 import { styled } from "styled-components";
 
-export const Container = styled.button`
+export const ButtonContainer = styled.button`
     height: 40px;
     display: flex;
     justify-content: start;
@@ -9,8 +9,7 @@ export const Container = styled.button`
     border: none;
     padding: var(--padding-md);
     cursor: pointer;
-    color: var(--color-white);
-    background-color: var(--color-black);
+    color: var(--color-black);
 
     &:hover {
         opacity: 0.7;

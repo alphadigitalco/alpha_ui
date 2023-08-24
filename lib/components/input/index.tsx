@@ -1,9 +1,10 @@
-import { Container } from "./styles";
+import { ComponentProps } from "react";
+import { InputContainer } from "./styles";
 
-export function Input() {
+type Props = ComponentProps<"input">;
+
+export function Input(props: Props) {
     return (
-        <Container>
-
-        </Container>
+        <InputContainer {...props} />
     );
 }

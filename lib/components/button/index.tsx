@@ -1,5 +1,5 @@
 import { ComponentProps, ReactNode } from "react";
-import { Container } from "./styles";
+import { ButtonContainer } from "./styles";
 
 type Props = ComponentProps<"button"> & {
     children: ReactNode;
@@ -7,8 +7,8 @@ type Props = ComponentProps<"button"> & {
 
 export function Button({ children, ...props }: Props) {
     return (
-        <Container type="button" {...props}>
+        <ButtonContainer type="button" {...props}>
             {children}
-        </Container>
+        </ButtonContainer>
     );
 }

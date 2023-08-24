@@ -4,7 +4,11 @@
     --color-black: #101010;
     --color-white: #ffffff;
 
-    --color0: #000000;
+    --color-gray0: #dedede;
+    --color-gray1: #777777;
+    --color-gray2: #808080;
+
+    --color0: #25bcff;
     --color1: #000000;
     --color2: #000000;
     --color3: #000000;
@@ -29,13 +33,13 @@
 
     --max-width: 1524px;
 
-    --margin-m: 8px;
+    --margin-sm: 8px;
     --margin-md: 16px;
     --margin-lg: 32px;
 
-    --padding-sm: 16px;
+    --padding-sm: 8px;
     --padding-md: 16px;
-    --padding-lg: 16px;
+    --padding-lg: 32px;
 
     --radius-sm: 8px;
     --radius-md: 16px;
@@ -79,9 +83,12 @@
 }
 
 body {
-	line-height: 1;
+    width: 100%;
     max-width: var(--max-width);
+    min-height: 100vh;
+    height: 100%;
     margin: 0 auto;
+	line-height: 1;
     font-family: var(--font-roboto);
 }
 
