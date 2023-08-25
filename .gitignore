@@ -1,5 +1,6 @@
 *.local
 *.log
+alpha-digital-alpha-ui*
 
 dist-ssr/
 dist/

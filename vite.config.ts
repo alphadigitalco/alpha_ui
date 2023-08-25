@@ -2,6 +2,7 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react-swc'
 import { resolve } from "path";
 import dts from "vite-plugin-dts";
+import packageJson from "./package.json";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -13,11 +14,12 @@ export default defineConfig({
             fileName: "index",
         },
         rollupOptions: {
-            external: ["react"],
+            external: Object.keys(packageJson.peerDependencies || {}),
             output: {
                 exports: "named",
                 globals: {
                     react: "React",
+                    "styled-components": "styledComponents",
                 }
             },
         },
