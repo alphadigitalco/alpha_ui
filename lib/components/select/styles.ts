@@ -1,17 +1,34 @@
 import { styled } from "styled-components";
 
 export const SelectContainer = styled.div`
-    height: 40px;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    padding: 0 var(--padding-sm);
     position: relative;
-    border-radius: var(--radius-sm);
     cursor: pointer;
-    background-color: var(--color-gray0);
+    background-color: transparent;
+
+    > .label {
+        display: block;
+        font-size: var(--font-sm);
+        color: var(--color-foreground);
+        margin-bottom: var(--margin-sm);
+    }
+
+    > .label > .icon {
+        width: 13px;
+        height: 13px;
+        fill: var(--color-foreground);
+        margin-left: 5px;
+    }
 
     > .forehead {
-        height: 100%;
+        min-height: 46px;
+        display: flex;
+        align-items: center;
+        padding: 0 var(--padding-sm);
+        border-radius: var(--radius-sm);
+        border: 1px solid var(--color-border);
     }
 
     > .forehead > .placeholder {
@@ -20,39 +37,47 @@ export const SelectContainer = styled.div`
         display: flex;
         justify-content: space-between;
         align-items: center;
-        color: var(--color-black);
+        color: var(--color-foreground);
     }
 
     > .placeholder > .icon {
-        width: 20px;
-        height: 20px;
-        fill: var(--color-gray1);
+        width: 25px;
+        height: 25px;
+        fill: var(--color-foreground);
     }
 
     > .wrapper {
+        display: none;
         width: 100%;
-        max-height: calc(40px * 4);
+        max-height: calc(46px * 4);
         position: absolute;
         top: calc(100% + 4px);
         left: 0;
         margin-top: var(--margin-sm);
         border-radius: var(--radius-sm);
+        border: 1px solid var(--color-border);
         overflow-y: scroll;
-        background-color: var(--color-gray0);
+        background-color: var(--color-background);
+    }
+
+    > .wrapper--enabled {
+        display: block;
     }
 
     > .wrapper > .option {
-        height: 40px;
+        min-height: 46px;
         display: flex;
         align-items: center;
         padding: 0 var(--padding-sm);
 
         &:hover {
-            background-color: var(--color-gray1);
+            color: var(--color-foreground);
+            background-color: var(--color-extinct);
         }
     }
 
     > .wrapper > .option--enabled {
-        background-color: #25bcff;
+        color: var(--color-background);
+        background-color: var(--color-primary);
     }
 `;

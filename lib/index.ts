@@ -1,6 +1,6 @@
 import "./index.css";
 export { Button } from "./components/button";
-export { Input } from "./components/input";
+export { SimpleInput, LabeledInput } from "./components/input";
 export { Select } from "./components/select";
 export { Toast } from "./components/toast";
 export { Table } from "./components/table";

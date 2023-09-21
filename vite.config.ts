@@ -4,7 +4,6 @@ import { resolve } from "path";
 import dts from "vite-plugin-dts";
 import packageJson from "./package.json";
 
-// https://vitejs.dev/config/
 export default defineConfig({
     build: {
         minify: "esbuild",

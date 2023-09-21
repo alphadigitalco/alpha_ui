@@ -40,3 +40,18 @@ export const Multiple: Story = {
         ]
     },
 };
+
+export const Labeled: Story = {
+    args: {
+        multiple: true,
+        label: "Labeled select",
+        placeholder: "Select your option",
+        options: [
+            { label: "Option 1", value: "1" },
+            { label: "Option 2", value: "2" },
+            { label: "Option 3", value: "3" },
+            { label: "Option 4", value: "4" },
+            { label: "Option 5", value: "5" },
+        ]
+    },
+};

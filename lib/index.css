@@ -7,22 +7,13 @@
     --color-black: #101010;
     --color-white: #ffffff;
 
-    --color0: #25bcff;
-    --color1: #e43a56;
-    --color2: #fafafa;
-    --color3: #dedede;
-    --color4: #777777;
-    --color5: #808080;
-    --color6: #2c2c2c;
-    --color7: #000000;
-    --color8: #000000;
-    --color9: #000000;
-    --color10: #000000;
-    --color11: #000000;
-    --color12: #000000;
-    --color13: #000000;
-    --color14: #000000;
-    --color15: #000000;
+    --color-foreground: var(--color-black);
+    --color-background: var(--color-white);
+    --color-primary: #25bcff;
+    --color-secondary: #e43a56;
+    --color-extinct: #777777;
+    --color-border: var(--color-foreground);
+    --color-focus: var(--color-primary);
 
     --breakpoint-sm: 480px;
     --breakpoint-md: 768px;

@@ -1,12 +1,5 @@
-import type { Preview, Decorator } from "@storybook/react";
-import { withThemeFromJSXProvider } from "@storybook/addon-styling";
-import { BaseCSS } from "../lib/index";
-
-export const decorators: Decorator[] = [
-    withThemeFromJSXProvider({
-        ...BaseCSS
-    }),
-];
+import type { Preview } from "@storybook/react";
+import "../lib/index.css";
 
 const preview: Preview = {
     parameters: {
