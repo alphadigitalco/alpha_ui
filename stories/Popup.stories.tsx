@@ -1,22 +1,28 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Footer } from "../lib/index";
+import { Popup } from "../lib/index";
 
 const meta = {
-    title: "Footer",
-    component: Footer,
+    title: "Popup",
+    component: Popup,
     parameters: {
         layout: "fullscreen",
     },
     tags: ["autodocs"],
     argTypes: {},
-} satisfies Meta<typeof Footer>;
+} satisfies Meta<typeof Popup>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
     args: {
-        signature: "Powered by",
         children: null,
+        isOpen: true,
+        handleClose: () => {},
     },
+    render: (args) => (
+        <Popup {...args}>
+            <p>Popup Content</p>
+        </Popup>
+    ),
 };

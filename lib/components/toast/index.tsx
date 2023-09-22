@@ -9,7 +9,7 @@ type IconProps = {
 };
 
 function IconSwitch({ type }: IconProps) {
-    switch(type) {
+    switch (type) {
         case "warn":
             return <PiWarningCircle />;
         case "error":
@@ -17,7 +17,7 @@ function IconSwitch({ type }: IconProps) {
         case "success":
             return <PiCheckCircle />;
         default:
-            return <BiInfoCircle />
+            return <BiInfoCircle />;
     }
 }
 

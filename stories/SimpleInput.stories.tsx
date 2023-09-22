@@ -1,13 +1,13 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import { SimpleInput } from '../lib/index';
+import type { Meta, StoryObj } from "@storybook/react";
+import { SimpleInput } from "../lib/index";
 
 const meta = {
-    title: 'Input',
+    title: "Input",
     component: SimpleInput,
     parameters: {
-        layout: 'centered',
+        layout: "centered",
     },
-    tags: ['autodocs'],
+    tags: ["autodocs"],
     argTypes: {},
 } satisfies Meta<typeof SimpleInput>;
 

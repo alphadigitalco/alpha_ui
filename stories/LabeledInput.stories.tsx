@@ -1,13 +1,13 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import { LabeledInput } from '../lib/index';
+import type { Meta, StoryObj } from "@storybook/react";
+import { LabeledInput } from "../lib/index";
 
 const meta = {
-    title: 'Input',
+    title: "Input",
     component: LabeledInput,
     parameters: {
-        layout: 'centered',
+        layout: "centered",
     },
-    tags: ['autodocs'],
+    tags: ["autodocs"],
     argTypes: {},
 } satisfies Meta<typeof LabeledInput>;
 

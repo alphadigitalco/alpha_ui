@@ -23,10 +23,10 @@ export const InputContainer = styled.div`
     }
 `;
 
-export const InputElement = styled.input`
+export const InputElement = styled.input<{ $isDisabled?: boolean }>`
     width: 100%;
     height: 46px;
-    border: 1px solid var(--color-foreground);
+    border: 1px solid ${(props) => (!props.$isDisabled ? "var(--color-foreground)" : "var(--color-extinct)")};
     border-radius: var(--radius-sm);
     padding: 0 var(--padding-sm);
     background-color: transparent;

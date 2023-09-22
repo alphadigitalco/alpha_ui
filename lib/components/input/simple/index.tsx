@@ -8,7 +8,7 @@ type Props = ComponentProps<"input"> & {
 export function SimpleInput({ description, ...props }: Props) {
     return (
         <InputContainer className="simple-input-container">
-            <InputElement {...props} />
+            <InputElement {...props} $isDisabled={props.disabled} />
 
             <span className="description">{description}</span>
         </InputContainer>

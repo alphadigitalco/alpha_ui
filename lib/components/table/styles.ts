@@ -7,7 +7,7 @@ export const TableContainer = styled.table`
     > thead {
         width: 100%;
         height: 40px;
-        background-color: var(--color-gray0);
+        background-color: var(--color-foreground);
     }
 
     > thead > tr {
@@ -17,13 +17,15 @@ export const TableContainer = styled.table`
     }
 
     > thead > tr > th {
-        width: 100%; 
+        width: 100%;
         height: 40px;
         display: flex;
         justify-content: center;
         align-items: center;
         padding: 0 var(--padding-sm);
         font-weight: bold;
+        font-size: var(--font-sm);
+        color: var(--color-background);
     }
 
     > tbody {
@@ -32,8 +34,13 @@ export const TableContainer = styled.table`
     }
 
     > tbody > tr {
-        height: 40px;
+        height: 48px;
         display: flex;
+
+        &:hover {
+            background-color: var(--color-extinct);
+            color: var(--color-background);
+        }
     }
 
     > tbody > tr > td {

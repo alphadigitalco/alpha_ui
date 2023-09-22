@@ -9,15 +9,11 @@ type Props = ComponentProps<"footer"> & {
 export function Footer({ signature, children, ...props }: Props) {
     return (
         <FooterContainer {...props}>
-            <div className="wrapper">
-                {children}
-            </div>
+            <div className="wrapper">{children}</div>
 
             <div className="signature">
                 <p className="text">
-                    {signature}
-                    {" "}
-                    <span className="alpha">@Alpha.Digital</span>
+                    {signature} <span className="alpha">@Alpha.Digital</span>
                 </p>
             </div>
         </FooterContainer>

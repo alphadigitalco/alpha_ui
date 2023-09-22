@@ -1,13 +1,13 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from "@storybook/react";
 import { Button, Table } from "../lib/index";
 
 const meta = {
-    title: 'Table',
+    title: "Table",
     component: Table,
     parameters: {
-        layout: 'centered',
+        layout: "centered",
     },
-    tags: ['autodocs'],
+    tags: ["autodocs"],
     argTypes: {},
 } satisfies Meta<typeof Table>;
 
@@ -23,7 +23,5 @@ export const Default: Story = {
             { col1: "Item 1", col2: "Item 2", col3: <Button>Button</Button> },
         ],
     },
-    render: (args) => (
-        <Table {...args}/>
-    ),
+    render: (args) => <Table {...args} />,
 };

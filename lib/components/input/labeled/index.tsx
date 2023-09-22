@@ -1,6 +1,6 @@
 import { ComponentProps } from "react";
 import { InputElement, InputContainer } from "./styles";
-import { PiWarningCircleLight } from "react-icons/pi"
+import { PiWarningCircleLight } from "react-icons/pi";
 
 type Props = ComponentProps<"input"> & {
     label: string;
@@ -15,7 +15,7 @@ export function LabeledInput({ label, description, ...props }: Props) {
                 {props.required && <PiWarningCircleLight className="icon" title="required" />}
             </label>
 
-            <InputElement {...props} />
+            <InputElement {...props} $isDisabled={props.disabled} />
 
             <span className="description">{description}</span>
         </InputContainer>

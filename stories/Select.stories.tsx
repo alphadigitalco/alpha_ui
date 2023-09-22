@@ -1,13 +1,13 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from "@storybook/react";
 import { Select } from "../lib/index";
 
 const meta = {
-    title: 'Select',
+    title: "Select",
     component: Select,
     parameters: {
-        layout: 'centered',
+        layout: "centered",
     },
-    tags: ['autodocs'],
+    tags: ["autodocs"],
     argTypes: {},
 } satisfies Meta<typeof Select>;
 
@@ -16,6 +16,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Single: Story = {
     args: {
+        stateManager: () => {},
         placeholder: "Select your option",
         options: [
             { label: "Option 1", value: "1" },
@@ -23,12 +24,13 @@ export const Single: Story = {
             { label: "Option 3", value: "3" },
             { label: "Option 4", value: "4" },
             { label: "Option 5", value: "5" },
-        ]
+        ],
     },
 };
 
 export const Multiple: Story = {
     args: {
+        stateManager: () => {},
         multiple: true,
         placeholder: "Select your option",
         options: [
@@ -37,12 +39,13 @@ export const Multiple: Story = {
             { label: "Option 3", value: "3" },
             { label: "Option 4", value: "4" },
             { label: "Option 5", value: "5" },
-        ]
+        ],
     },
 };
 
 export const Labeled: Story = {
     args: {
+        stateManager: () => {},
         multiple: true,
         label: "Labeled select",
         placeholder: "Select your option",
@@ -52,6 +55,6 @@ export const Labeled: Story = {
             { label: "Option 3", value: "3" },
             { label: "Option 4", value: "4" },
             { label: "Option 5", value: "5" },
-        ]
+        ],
     },
 };
