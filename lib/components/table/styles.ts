@@ -3,11 +3,13 @@ import { styled } from "styled-components";
 export const TableContainer = styled.table`
     width: 100%;
     height: 100%;
+    border-collapse: collapse;
 
     > thead {
         width: 100%;
         height: 40px;
         background-color: var(--color-foreground);
+        border-radius: 4px;
     }
 
     > thead > tr {
@@ -36,6 +38,8 @@ export const TableContainer = styled.table`
     > tbody > tr {
         height: 48px;
         display: flex;
+        margin: 2px 0;
+        border-radius: 4px;
 
         &:hover {
             background-color: var(--color-extinct);

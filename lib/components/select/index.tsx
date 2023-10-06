@@ -3,6 +3,14 @@ import { SelectContainer } from "./styles";
 import { BiChevronDown } from "react-icons/bi";
 import { PiWarningCircleLight } from "react-icons/pi";
 
+type ItemSelectedProps = {
+    label: string 
+};
+
+function ItemSelected(props: ItemSelectedProps) {
+    return <p className="item--selected">{props.label}</p>;
+}
+
 type Option = {
     label: string;
     value: string;
@@ -12,7 +20,7 @@ type Props = ComponentProps<"select"> & {
     stateManager: (state: string[]) => void;
     options: Option[];
     label?: string;
-    // Used when 1+ items are selected on select multiple
+    // Used when +1 item are selected on select multiple
     oversizeText?: string;
 };
 
@@ -22,12 +30,16 @@ export function Select({ label, oversizeText, options, stateManager, ...props }:
     const [items, setItems] = useState<Set<any>>(new Set());
 
     function select__handleClick() {
+        if (props.disabled) {
+            return;
+        }
+
         ref2.current?.classList.toggle("wrapper--enabled");
     }
 
-    function option__handleClick(item: Option): void {
+    function option__handleClick(item: Option) {
         if (props.disabled) {
-            return null as any;
+            return;
         }
 
         if (props.multiple && items.has(item)) {
@@ -51,11 +63,15 @@ export function Select({ label, oversizeText, options, stateManager, ...props }:
                 <span className="placeholder">
                     {items.size > 0 &&
                         (items.size === 1 ? (
-                            <p className="item--selected">{Array.from(items.values())[0].label}</p>
+                            <ItemSelected label={Array.from(items.values())[0].label} />
                         ) : (
-                            <p className="item--selected">{items.size + (oversizeText ?? "")}</p>
+                            <ItemSelected label={items.size + (oversizeText ?? "")} />
                         ))}
-                    {items.size === 0 && props.value && props.value}
+
+                    {items.size === 0 && props.value && (
+                        <ItemSelected label={options.find((item) => item.value === props.value)?.label ?? ""} />
+                    )}
+
                     {items.size === 0 && !props.value && props.placeholder}
 
                     <BiChevronDown className="icon" />

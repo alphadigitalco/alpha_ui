@@ -17,11 +17,24 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
     args: {
         headers: ["Column 1", "Column 2", "Column 3"],
-        data: [
-            { col1: "Item 1", col2: "Item 2", col3: "Item 3" },
-            { col1: "Item 1", col2: "Item 2", col3: "Item 3" },
-            { col1: "Item 1", col2: "Item 2", col3: <Button>Button</Button> },
-        ],
     },
-    render: (args) => <Table {...args} />,
+    render: (args) => (
+        <Table {...args}>
+            <tr>
+                <td>Item 1</td>
+                <td>Item 2</td>
+                <td>Item 3</td>
+            </tr>
+            <tr>
+                <td>Item 1</td>
+                <td>Item 2</td>
+                <td>Item 3</td>
+            </tr>
+            <tr>
+                <td>Item 1</td>
+                <td>Item 2</td>
+                <td><Button>Button</Button></td>
+            </tr>
+        </Table>
+    ),
 };

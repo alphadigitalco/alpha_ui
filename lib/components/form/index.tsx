@@ -11,7 +11,7 @@ type Props = {
 
 export function Form({ children, header }: Props) {
     return (
-        <FormContainer>
+        <FormContainer className="form-container">
             <section className="header">
                 <h3 className="title">{header.title}</h3>
                 {header.subtitle && <p className="subtitle">{header.subtitle}</p>}

@@ -1,12 +1,12 @@
-import { ComponentProps } from "react";
+import { ComponentProps, ReactNode } from "react";
 import { TableContainer } from "./styles";
 
 type Props = ComponentProps<"table"> & {
+    children: ReactNode;
     headers: string[];
-    data: Record<string, any>[];
 };
 
-export function Table({ headers, data, ...props }: Props) {
+export function Table({ children, headers, ...props }: Props) {
     return (
         <TableContainer {...props}>
             <thead>
@@ -18,14 +18,8 @@ export function Table({ headers, data, ...props }: Props) {
             </thead>
 
             <tbody>
-                {data.map((item, index) => (
-                    <tr key={index}>
-                        {Object.values(item).map((value: any) => (
-                            <td key={value}>{value}</td>
-                        ))}
-                    </tr>
-                ))}
-            </tbody>
+                {children}
+           </tbody>
         </TableContainer>
     );
 }
